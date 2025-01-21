@@ -1,8 +1,9 @@
-// Get elements
+// Get the toggle button and side menu
 const menuToggle = document.getElementById('menu-toggle');
 const sideMenu = document.getElementById('side-menu');
 
-// Add event listener for the button
+// Add event listener for button click
 menuToggle.addEventListener('click', () => {
-    sideMenu.classList.toggle('active'); // Toggle the "active" class
+    // Toggle the "active" class on the side menu
+    sideMenu.classList.toggle('active');
 });
