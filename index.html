@@ -3,47 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erfan Khodami's Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Erfan Khodami</title>
+    <style>
+        /* Add your existing CSS here */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+            color: #ecf0f1;
+            padding: 0;
+        }
+        .sidebar {
+            background-color: #2c3e50;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar.active {
+            transform: translateX(0);
+        }
+        .contact-info h3 {
+            color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-left: 0;
+            padding: 20px;
+            width: 100%;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        .main-content {
+            max-width: 800px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .header {
+            text-align: center;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #ecf0f1;
+        }
+        h1 {
+            font-size: 32px;
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+            color: #34495e;
+        }
+        h2 {
+            font-size: 24px;
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 18px;
+            color: #34495e;
+            margin: 5px 0;
+        }
+        .open-btn {
+            background-color: #1abc9c;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+        }
+        .open-btn:focus {
+            outline: none;
+        }
+        .contact-info {
+            margin-top: 50px; /* Adjusted to ensure text is not under the button */
+        }
+        #game {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        #ball {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            cursor: pointer;
+        }
+        #score {
+            color: white;
+            font-size: 24px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
-<button class="open-btn" onclick="toggleSidebar()">☰</button>
 
+<!-- Sidebar Menu -->
 <div class="sidebar">
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
     <div class="contact-info">
-        <h3>How to contact me 📩</h3>
-        <p><strong>Email:</strong> <a href="mailto:khodami.erfan@gmail.com">khodami.erfan@gmail.com</a></p>
-        <p><a href="https://www.linkedin.com/in/erfan-khodami-669b9a244/" target="_blank">LinkedIn</a></p>
-        <p><a href="https://instagram.com/thisis_efi_erfan/" target="_blank">Instagram</a></p>
-        <p><a href="https://erfan-khodami.itch.io/" target="_blank">Itch.io</a></p>
-        <p><a href="https://github.com/Erfankhodami" target="_blank">GitHub</a></p>
+        <h3>How to contact me:</h3>
+        <a href="mailto:khodami.erfan@gmail.com">Email: khodami.erfan@gmail.com</a>
+        <a href="https://www.linkedin.com/in/erfan-khodami-669b9a244/">LinkedIn</a>
+        <a href="https://instagram.com/thisis_efi_erfan/">Instagram</a>
+        <a href="https://erfan-khodami.itch.io/">Itch.io</a>
+        <a href="https://github.com/Erfankhodami">GitHub</a>
     </div>
 </div>
 
+<!-- Main Content -->
 <div class="content">
     <div class="main-content">
         <div class="header">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-            <h1>Hi, I'm Erfan Khodami 👋</h1>
-            <p>I previously did 3D Animations and Modeling with Blender and Substance Painter and have about 2 years of experience. I have been doing Game Development with Unity for about 3 years now, and I really love to learn new things 🚀</p>
-            <h2>Skills 💻</h2>
+            <img class="profile-img" src="profile.jpg" alt="Profile Image">
+            <h1>Erfan Khodami</h1>
+            <p>I am a Computer Science student at Isfahan University. I also love Game Development!</p>
+            <h2>About Me</h2>
+            <p>I previously did 3D Animations and Modeling with Blender and Substance Painter and have about 2 years of experience. I've been doing Game Development with Unity for about 3 years now, and I really love to learn new things. 🎮💻</p>
+            <h2>Skills</h2>
             <ul>
                 <li>C# programming for Unity</li>
-                <li>3D Animations and Modeling</li>
-                <li>Video Editing with Premiere Pro 🎬</li>
-                <li>Texturing with Substance Painter 🎨</li>
-                <li>A little of Industrial Design with SolidWorks 🛠️</li>
+                <li>3D animations and modeling</li>
+                <li>Video editing with Premiere Pro</li>
+                <li>Texturing with Substance Painter</li>
+                <li>A little of industrial design with SolidWorks</li>
             </ul>
         </div>
     </div>
 </div>
 
-<!-- Easter Egg Game -->
-<div class="game" id="game" style="display: none;">
-    <h2>🎮 Mini Game: Catch the Ball!</h2>
-    <p>Click the ball to earn points! 🎯</p>
-    <div class="ball" id="ball"></div>
-    <p>Score: <span id="score">0</span></p>
+<!-- Mini-Game -->
+<div id="game">
+    <div id="ball"></div>
+    <div>Score: <span id="score">0</span></div>
 </div>
 
 <script>
@@ -52,16 +188,27 @@
     const ball = document.getElementById('ball');
     const scoreDisplay = document.getElementById('score');
     const gameContainer = document.getElementById('game');
+    let lastClickTime = 0;
+    const timeLimit = 3000; // 3 seconds (3,000 milliseconds) time limit between clicks
 
     // Function to toggle the sidebar visibility
     function toggleSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle('active');
 
-        // Track clicks
-        clickCount++;
+        const currentTime = new Date().getTime();
+
+        // Check if the time between the current click and the last click is within the time limit
+        if (currentTime - lastClickTime <= timeLimit) {
+            clickCount++;
+        } else {
+            clickCount = 1; // Reset click count if time limit is exceeded
+        }
+
+        lastClickTime = currentTime; // Update last click time
+
         if (clickCount >= 5) {
-            gameContainer.style.display = 'block'; // Show the mini-game after 5 clicks
+            gameContainer.style.display = 'block'; // Show the mini-game after 5 continuous clicks
             document.querySelector('.open-btn').disabled = true; // Disable the sidebar button to prevent further clicks
         }
     }
@@ -70,8 +217,7 @@
     ball.addEventListener('click', function () {
         score++;
         scoreDisplay.textContent = score;
-        ball.style.top = `${Math.random() * 80}%`; // Move the ball to a random position
-        ball.style.left = `${Math.random() * 80}%`; // Move the ball to a random position
+        moveBall(); // Move the ball to a random position after each click
     });
 
     // Generate a random position for the ball
