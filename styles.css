@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  z-index: 2; /* Keep sidebar on top */
+  z-index: 2; /* Ensure sidebar is on top of content */
 }
 .sidebar.active {
   transform: translateX(0);
@@ -101,7 +101,7 @@ ul li {
   position: fixed;
   top: 15px;
   left: 15px;
-  z-index: 3; /* Keep the button on top of everything else */
+  z-index: 3; /* Ensure the button stays on top */
 }
 .open-btn:focus {
   outline: none;
@@ -118,7 +118,7 @@ ul li {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   text-align: center;
-  z-index: 4; /* Keep the game on top */
+  z-index: 4; /* Ensure the game is on top */
 }
 #ball {
   width: 50px;
