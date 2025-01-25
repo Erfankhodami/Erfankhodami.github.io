@@ -6,7 +6,7 @@ body {
   background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
   color: #ecf0f1;
   padding: 0;
-  position: relative; /* Allow proper positioning of the button */
+  position: relative;
 }
 
 .sidebar {
@@ -43,6 +43,10 @@ body {
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+.contact-info p strong {
+  color: white; /* Change Email label text to white */
 }
 
 .content {
@@ -122,9 +126,5 @@ ul li {
 }
 
 .contact-info {
-  margin-top: 50px; /* Adjusted to ensure text is not under the button */
-}
-
-.contact-info p strong {
-  color: white; /* Change Email label text to white */
+  margin-top: 50px;
 }
