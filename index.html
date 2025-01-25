@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Side Menu Toggle</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erfan Khodami - Resume</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Toggle Button -->
-    <button id="menu-toggle" class="menu-button">☰</button>
-
-    <!-- Side Menu -->
-    <aside class="side-menu" id="side-menu">
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <main>
-        <h1>Welcome to My Website</h1>
-        <p>This is a demo of a side menu that toggles with a button.</p>
-    </main>
-
-    <script src="scripts.js"></script>
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <div class="profile">
+      <img src="profile.jpg" alt="Erfan Khodami" class="profile-img">
+      <h1>Erfan Khodami</h1>
+      <p>Computer Student at Isfahan University</p>
+      <p>Game Developer</p>
+      <a href="mailto:khodami.erfan@gmail.com">khodami.erfan@gmail.com</a>
+    </div>
+  </div>
+  <div class="content">
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+    <h2>Welcome to My Resume</h2>
+    <p>Here you can find my information and projects.</p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
