@@ -3,52 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erfan Khodami - Resume</title>
+    <title>Erfan Khodami's Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="sidebar" id="sidebar">
+<div class="sidebar">
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
     <div class="contact-info">
-        <h3>How to contact me:</h3>
-        <a href="mailto:khodami.erfan@gmail.com">khodami.erfan@gmail.com</a>
-        <a href="https://www.linkedin.com/in/erfan-khodami-669b9a244/" target="_blank">LinkedIn Profile</a>
-        <a href="https://instagram.com/thisis_efi_erfan/" target="_blank">Instagram</a>
-        <a href="https://erfan-khodami.itch.io/" target="_blank">Itch.io</a>
+        <h3>How to contact me 📩</h3>
+        <p><strong>Email:</strong> <a href="mailto:khodami.erfan@gmail.com">khodami.erfan@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/erfan-khodami-669b9a244/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://instagram.com/thisis_efi_erfan/" target="_blank">Instagram</a></p>
+        <p><a href="https://erfan-khodami.itch.io/" target="_blank">Itch.io</a></p>
     </div>
 </div>
 
 <div class="content">
-    <button class="open-btn" onclick="toggleSidebar()">☰</button>
     <div class="main-content">
         <div class="header">
-            <img src="profile.jpg" alt="Erfan Khodami" class="profile-img">
-            <h1>Erfan Khodami</h1>
-            <p>Computer Student at Isfahan University</p>
-            <p>Game Developer</p>
-        </div>
-
-        <div class="about-me">
-            <h2>About Me</h2>
-            <p>
-                I previously did 3D animations and modeling with Blender and have about 2 years of experience.
-                I have been doing game development for about 3 years now, and I really love to learn new things.
-            </p>
-        </div>
-
-        <div class="skills">
-            <h2>Skills</h2>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Hi, I'm Erfan Khodami 👋</h1>
+            <p>I previously did 3D Animations and Modeling with Blender and Substance Painter and have about 2 years of experience. I have been doing Game Development with Unity for about 3 years now, and I really love to learn new things 🚀</p>
+            <h2>Skills 💻</h2>
             <ul>
                 <li>C# programming for Unity</li>
-                <li>3D animations and modeling</li>
-                <li>Video editing with Premiere Pro</li>
-                <li>Texturing with Substance Painter</li>
-                <li>A little industrial design with SolidWorks</li>
+                <li>3D Animations and Modeling</li>
+                <li>Video Editing with Premiere Pro 🎬</li>
+                <li>Texturing with Substance Painter 🎨</li>
+                <li>A little of Industrial Design with SolidWorks 🛠️</li>
             </ul>
         </div>
     </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+    }
+</script>
 </body>
 </html>

@@ -122,3 +122,13 @@ ul li {
 .contact-info {
   margin-top: 50px; /* Adjusted to ensure text is not under the button */
 }
+/* The previous CSS remains the same, only adding adjustments for styling the emojis */
+h1, h2, p {
+  display: flex;
+  align-items: center;
+}
+
+h1::after, h2::after, p::after {
+  content: "😊";
+  margin-left: 10px;
+}
