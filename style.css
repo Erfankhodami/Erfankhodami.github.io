@@ -83,7 +83,7 @@ p {
   color: #34495e;
 }
 
-.open-btn, .close-btn {
+.open-btn {
   background-color: #1abc9c;
   color: #fff;
   border: none;
@@ -91,15 +91,11 @@ p {
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 5px;
-}
-
-.open-btn {
   position: fixed;
   top: 15px;
   left: 15px;
 }
 
-.close-btn {
-  align-self: flex-end;
-  margin-bottom: 20px;
+.hidden {
+  display: none;
 }
