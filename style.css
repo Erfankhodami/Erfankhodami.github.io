@@ -6,6 +6,7 @@ body {
   background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
   color: #ecf0f1;
   padding: 0;
+  position: relative; /* Allow proper positioning of the button */
 }
 
 .sidebar {
@@ -113,6 +114,7 @@ ul li {
   position: fixed;
   top: 15px;
   left: 15px;
+  z-index: 10; /* Ensure it's on top of other content */
 }
 
 .open-btn:focus {
