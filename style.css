@@ -124,3 +124,7 @@ ul li {
 .contact-info {
   margin-top: 50px; /* Adjusted to ensure text is not under the button */
 }
+
+.contact-info p strong {
+  color: white; /* Change Email label text to white */
+}
