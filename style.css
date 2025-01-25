@@ -26,36 +26,15 @@ body {
   transform: translateX(0);
 }
 
-.profile {
-  text-align: center;
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  border: 3px solid #ecf0f1;
-}
-
-.profile h1 {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.profile p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #bdc3c7;
-}
-
-.profile a {
+.contact-info a {
   color: #1abc9c;
   text-decoration: none;
   font-size: 14px;
-  display: block;
-  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .content {
@@ -73,14 +52,42 @@ body {
   max-width: 800px;
 }
 
-h2 {
-  font-size: 28px;
+.header {
+  text-align: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #ecf0f1;
+}
+
+h1 {
+  font-size: 32px;
   color: #2c3e50;
 }
 
 p {
   font-size: 18px;
   color: #34495e;
+}
+
+h2 {
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 18px;
+  color: #34495e;
+  margin: 5px 0;
 }
 
 .open-btn {
@@ -94,8 +101,4 @@ p {
   position: fixed;
   top: 15px;
   left: 15px;
-}
-
-.hidden {
-  display: none;
 }

@@ -9,43 +9,43 @@
 </head>
 <body>
 <div class="sidebar" id="sidebar">
-  <div class="profile">
-    <img src="profile.jpg" alt="Erfan Khodami" class="profile-img">
-    <h1>Erfan Khodami</h1>
-    <p>Computer Student at Isfahan University</p>
-    <p>Game Developer</p>
+  <div class="contact-info">
     <a href="mailto:khodami.erfan@gmail.com">khodami.erfan@gmail.com</a>
     <a href="https://www.linkedin.com/in/erfan-khodami-669b9a244/" target="_blank">LinkedIn Profile</a>
-    <hr>
-    <h2>About Me</h2>
-    <p>
-      I previously did 3D animations and modeling with Blender and have about 2 years of experience.
-      I have been doing game development for about 3 years now, and I really love to learn new things.
-    </p>
-    <h2>Skills</h2>
-    <ul>
-      <li>C# programming for Unity</li>
-      <li>3D animations and modeling</li>
-      <li>Video editing with Premiere Pro</li>
-      <li>Texturing with Substance Painter</li>
-      <li>A little industrial design with SolidWorks</li>
-    </ul>
   </div>
 </div>
+
 <div class="content">
   <button class="open-btn" onclick="toggleSidebar()">☰</button>
   <div class="main-content">
-    <h2>Welcome to My Resume</h2>
-    <p>
-      Explore my journey in game development, view my skills and achievements,
-      and don’t forget to connect with me!
-    </p>
+    <div class="header">
+      <img src="profile.jpg" alt="Erfan Khodami" class="profile-img">
+      <h1>Erfan Khodami</h1>
+      <p>Computer Student at Isfahan University</p>
+      <p>Game Developer</p>
+    </div>
+
+    <div class="about-me">
+      <h2>About Me</h2>
+      <p>
+        I previously did 3D animations and modeling with Blender and have about 2 years of experience.
+        I have been doing game development for about 3 years now, and I really love to learn new things.
+      </p>
+    </div>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>C# programming for Unity</li>
+        <li>3D animations and modeling</li>
+        <li>Video editing with Premiere Pro</li>
+        <li>Texturing with Substance Painter</li>
+        <li>A little industrial design with SolidWorks</li>
+      </ul>
+    </div>
   </div>
 </div>
-<div id="pacman-container" class="hidden">
-  <!-- Pac-Man game will be displayed here -->
-  <iframe src="https://google.com/logos/2010/pacman10-i.html" frameborder="0" width="100%" height="500px"></iframe>
-</div>
+
 <script src="script.js"></script>
 </body>
 </html>
