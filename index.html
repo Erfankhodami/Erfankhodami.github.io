@@ -1,54 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erfan Khodami - Resume</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="sidebar" id="sidebar">
-  <div class="contact-info">
-    <h3>How to contact me:</h3>
-    <a href="mailto:khodami.erfan@gmail.com">khodami.erfan@gmail.com</a>
-    <a href="https://www.linkedin.com/in/erfan-khodami-669b9a244/" target="_blank">LinkedIn Profile</a>
-    <a href="https://instagram.com/thisis_efi_erfan/" target="_blank">Instagram</a>
-    <a href="https://erfan-khodami.itch.io/" target="_blank">Itch.io</a>
-  </div>
-</div>
+body {
+margin: 0;
+font-family: 'Roboto', sans-serif;
+display: flex;
+height: 100vh;
+background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+color: #ecf0f1;
+padding: 0;
+}
 
-<div class="content">
-  <button class="open-btn" onclick="toggleSidebar()">☰</button>
-  <div class="main-content">
-    <div class="header">
-      <img src="profile.jpg" alt="Erfan Khodami" class="profile-img">
-      <h1>Erfan Khodami</h1>
-      <p>Computer Student at Isfahan University</p>
-      <p>Game Developer</p>
-    </div>
+.sidebar {
+background-color: #2c3e50;
+width: 250px;
+height: 100%;
+position: fixed;
+left: 0;
+top: 0;
+transform: translateX(-100%);
+transition: transform 0.3s ease;
+display: flex;
+flex-direction: column;
+padding: 20px;
+box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
 
-    <div class="about-me">
-      <h2>About Me</h2>
-      <p>
-        I previously did 3D animations and modeling with Blender and have about 2 years of experience.
-        I have been doing game development for about 3 years now, and I really love to learn new things.
-      </p>
-    </div>
+.sidebar.active {
+transform: translateX(0);
+}
 
-    <div class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>C# programming for Unity</li>
-        <li>3D animations and modeling</li>
-        <li>Video editing with Premiere Pro</li>
-        <li>Texturing with Substance Painter</li>
-        <li>A little industrial design with SolidWorks</li>
-      </ul>
-    </div>
-  </div>
-</div>
+.contact-info h3 {
+color: #ecf0f1;
+margin-bottom: 20px;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+.contact-info a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+margin-bottom: 15px;
+display: block;
+}
+
+.contact-info a:hover {
+text-decoration: underline;
+}
+
+.content {
+margin-left: 0;
+padding: 20px;
+width: 100%;
+overflow-y: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: column;
+}
+
+.main-content {
+max-width: 800px;
+text-align: center;
+background: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+padding: 30px;
+border-radius: 10px;
+}
+
+.header {
+text-align: center;
+}
+
+.profile-img {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+margin-bottom: 10px;
+border: 3px solid #ecf0f1;
+}
+
+h1 {
+font-size: 32px;
+color: #2c3e50;
+}
+
+p {
+font-size: 18px;
+color: #34495e;
+}
+
+h2 {
+font-size: 24px;
+color: #2c3e50;
+}
+
+ul {
+list-style-type: none;
+padding: 0;
+}
+
+ul li {
+font-size: 18px;
+color: #34495e;
+margin: 5px 0;
+}
+
+.open-btn {
+background-color: #1abc9c;
+color: #fff;
+border: none;
+font-size: 20px;
+cursor: pointer;
+padding: 10px 15px;
+border-radius: 5px;
+position: fixed;
+top: 15px;
+left: 15px;
+}
+
+.open-btn:focus {
+outline: none;
+}
+
+.contact-info {
+margin-top: 50px; /* Adjusted to ensure text is not under the button */
+}
