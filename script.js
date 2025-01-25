@@ -3,16 +3,27 @@ let score = 0;
 const ball = document.getElementById('ball');
 const scoreDisplay = document.getElementById('score');
 const gameContainer = document.getElementById('game');
+let lastClickTime = 0;
+const timeLimit = 3000; // 3 seconds (3,000 milliseconds) time limit between clicks
 
 // Function to toggle the sidebar visibility
 function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
   sidebar.classList.toggle('active');
 
-  // Track clicks
-  clickCount++;
+  const currentTime = new Date().getTime();
+
+  // Check if the time between the current click and the last click is within the time limit
+  if (currentTime - lastClickTime <= timeLimit) {
+    clickCount++;
+  } else {
+    clickCount = 1; // Reset click count if time limit is exceeded
+  }
+
+  lastClickTime = currentTime; // Update last click time
+
   if (clickCount >= 5) {
-    gameContainer.style.display = 'block'; // Show the mini-game after 5 clicks
+    gameContainer.style.display = 'block'; // Show the mini-game after 5 continuous clicks
     document.querySelector('.open-btn').disabled = true; // Disable the sidebar button to prevent further clicks
   }
 }
