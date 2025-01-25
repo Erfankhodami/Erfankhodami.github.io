@@ -16,6 +16,7 @@
         <p><a href="https://www.linkedin.com/in/erfan-khodami-669b9a244/" target="_blank">LinkedIn</a></p>
         <p><a href="https://instagram.com/thisis_efi_erfan/" target="_blank">Instagram</a></p>
         <p><a href="https://erfan-khodami.itch.io/" target="_blank">Itch.io</a></p>
+        <p><a href="https://github.com/Erfankhodami" target="_blank">GitHub</a></p>
     </div>
 </div>
 
@@ -37,11 +38,49 @@
     </div>
 </div>
 
+<!-- Easter Egg Game -->
+<div class="game" id="game" style="display: none;">
+    <h2>🎮 Mini Game: Catch the Ball!</h2>
+    <p>Click the ball to earn points! 🎯</p>
+    <div class="ball" id="ball"></div>
+    <p>Score: <span id="score">0</span></p>
+</div>
+
 <script>
+    let clickCount = 0;
+    let score = 0;
+    const ball = document.getElementById('ball');
+    const scoreDisplay = document.getElementById('score');
+    const gameContainer = document.getElementById('game');
+
+    // Function to toggle the sidebar visibility
     function toggleSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle('active');
+
+        // Track clicks
+        clickCount++;
+        if (clickCount >= 5) {
+            gameContainer.style.display = 'block'; // Show the mini-game after 5 clicks
+            document.querySelector('.open-btn').disabled = true; // Disable the sidebar button to prevent further clicks
+        }
     }
+
+    // Ball click event to increase score
+    ball.addEventListener('click', function () {
+        score++;
+        scoreDisplay.textContent = score;
+        ball.style.top = `${Math.random() * 80}%`; // Move the ball to a random position
+        ball.style.left = `${Math.random() * 80}%`; // Move the ball to a random position
+    });
+
+    // Generate a random position for the ball
+    function moveBall() {
+        ball.style.top = `${Math.random() * 80}%`;
+        ball.style.left = `${Math.random() * 80}%`;
+    }
+
+    setInterval(moveBall, 1000); // Move the ball every second
 </script>
 </body>
 </html>
